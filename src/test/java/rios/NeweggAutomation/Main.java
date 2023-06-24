@@ -62,7 +62,7 @@ public class Main //1st Class
         continueToCheckoutBtn = browser.findElement(By.xpath("//*[@id=\"modal-intermediary\"]/div/div/div[2]/div[2]/button[2]")); //locates the continue to checkout button
         continueToCheckoutBtn.click(); //clicks on button
        
-        Thread.sleep(1000); //sleep for 1 second
+        Thread.sleep(2000); //sleep for 1 second
         
         WebElement guestCheckoutBtn;
         guestCheckoutBtn = browser.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div/form[2]/div[2]/div/button")); //locates the guest checkout button
@@ -86,7 +86,7 @@ public class Main //1st Class
         //textBoxLastName.sendKeys(lN); //types last name into the textbox
         
         WebElement textBoxAddress;
-        textBoxAddress = browser.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[2]/div[5]/input")); //locates textbox for last name
+        textBoxAddress = browser.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[2]/div[7]/label[2]/input")); //locates textbox for last name
         textBoxAddress.sendKeys(A); //types address into the textbox
         
         WebElement textBoxCity;
@@ -120,6 +120,7 @@ public class Main //1st Class
         
         if (browser.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[3]/button[1]")).isDisplayed() == true) //if you want to sign in is present, because system recognizes that the email inputted has an account
         {
+            Thread.sleep(2000);
             WebElement continueAsGuestBtn;
             continueAsGuestBtn = browser.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[3]/button[2]")); //locates the continue as guest button
             continueAsGuestBtn.click(); //clicks on button
@@ -130,6 +131,7 @@ public class Main //1st Class
         
         if (browser.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[1]/div/h5")).isDisplayed() == true) //if pop up window suggest an address
         {
+            Thread.sleep(2000);
             WebElement useSuggestedAddressBtn;
             useSuggestedAddressBtn = browser.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[3]/button[2]")); //locate the use address button
             useSuggestedAddressBtn.click(); //clicks on button
@@ -145,7 +147,7 @@ public class Main //1st Class
         Thread.sleep(2000);
         
         WebElement continueToPaymentBtn;
-        continueToPaymentBtn = browser.findElement(By.xpath("//*[@id=\"deliveryItemCell\"]/div/div[3]/button")); //locates the continue to payment button
+        continueToPaymentBtn = browser.findElement(By.xpath("//*[@id=\"deliveryItemCell\"]/div/div[3]/button[2]")); //locates the continue to payment button
         continueToPaymentBtn.click(); //clicks on button
         
         Thread.sleep(2000);
@@ -158,6 +160,7 @@ public class Main //1st Class
         
       
         browser = browser.switchTo().frame(browser.findElement(By.tagName("iframe"))); //switches browser to focus on iframe, since payment details are encapsulated inside it
+        Thread.sleep(1000);
        
         WebElement cardNameTextBox;
         cardNameTextBox = browser.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div[1]/input")); //locates textbox for card name
