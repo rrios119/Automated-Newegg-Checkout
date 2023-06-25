@@ -13,7 +13,7 @@ Takes user inputs through JOption prompts and validates correct format using Reg
 - Insert Needed Information
 - Chrome WebDriver automatically opens and automates the Checkout Process
 
-[![Autonomous Checkout](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/2U9BnRntcYs)
+<iframe width="560" height="315" src="https://youtu.be/2U9BnRntcYs" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture"></iframe>
 
 ## User Inputs
 **ALL USER INPUTS ARE PUT INTO OBJECTS SO THEY ARE NOT BEING STORED ANYWHERE ELSE**
