@@ -179,7 +179,7 @@ public class Automate {
         
         while (condition)
         {
-            E = JOptionPane.showInputDialog("Enter your email address (Ex: bob123@gmail.com): ");
+            E = JOptionPane.showInputDialog("Enter your email address (Ex: bob23@gmail.com): ");
             
             if (E.matches("^(.+)@(?:[a-zA-Z].+[a-zA-Z])$"))
             {

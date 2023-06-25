@@ -159,9 +159,16 @@ public class Main //1st Class
         Thread.sleep(3000);
         
       
-        browser = browser.switchTo().frame(browser.findElement(By.tagName("iframe"))); //switches browser to focus on iframe, since payment details are encapsulated inside it
+        browser = browser.switchTo().frame(browser.findElement(By.className("zoid-visible"))); //switches browser to focus on iframe, since payment details are encapsulated inside it
+        //browser = browser.switchTo().frame(browser.findElement(By.xpath("//*[@id=\"uid_63323f7a66_mdq6mjg6mta\"]")));
+        //iframe by tagName
         Thread.sleep(1000);
        
+        //String iframeHtml = browser.getPageSource();
+
+        //      Print the HTML of the iframe
+        //System.out.println(iframeHtml);
+
         WebElement cardNameTextBox;
         cardNameTextBox = browser.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div[1]/input")); //locates textbox for card name
         cardNameTextBox.sendKeys(cN); //types name into textbox
@@ -177,10 +184,11 @@ public class Main //1st Class
        
         for (int i = 0; i < length; i++)
         {
-            empty_value = empty_value.replaceFirst("_", String.valueOf(digits[i]));
+            empty_value = empty_value.replaceFirst("", String.valueOf(digits[i]));
+            //empty_value = empty_value.replaceFirst("_", String.valueOf(digits[i]));
         }
-        cardNumTextBox.sendKeys(empty_value); //types card number into textbox
-        
+        cardNumTextBox.sendKeys(CardNum); //types card number into textbox
+        //empty_value
         
         
         Select month = new Select(browser.findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[1]/div[4]/label[2]/select"))); //locates month dropdown 
@@ -206,9 +214,11 @@ public class Main //1st Class
         Thread.sleep(1000);
         
         browser = browser.switchTo().defaultContent(); //switches browser's focus back to the html body/head 
+
+        Thread.sleep(1000);
         
         WebElement cvvTextBox;
-        cvvTextBox = browser.findElement(By.xpath("//*[@id=\"paymentItemCell\"]/div/div[2]/div[2]/div[2]/div[2]/div[3]/div/div/label/div[4]/input")); //locates textbox for cvv
+        cvvTextBox = browser.findElement(By.xpath("//*[@id=\"paymentItemCell\"]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div/div/label/div[4]/input")); //locates textbox for cvv
         
         String CVV_Number = String.valueOf(CVV);
         char[] cvvDigits = CVV_Number.toCharArray();
@@ -220,10 +230,11 @@ public class Main //1st Class
         {
             empty_value2 = empty_value2.replaceFirst("_", String.valueOf(cvvDigits[i]));
         }
-        cvvTextBox.sendKeys(CVV_Number); //types card cvv into textbox
+        cvvTextBox.sendKeys(empty_value2); //types card cvv into textbox
+        //CVV_Number
         
         WebElement reviewOrderBtn; 
-        reviewOrderBtn = browser.findElement(By.xpath("//*[@id=\"paymentItemCell\"]/div/div[3]/button")); //locates review your order button
+        reviewOrderBtn = browser.findElement(By.xpath("//*[@id=\"paymentItemCell\"]/div/div[3]/button[2]")); //locates review your order button
         reviewOrderBtn.click(); //clicks on button
         
         //WebElement placeOrderBtn; COMMENT THIS OUT IF YOU WANT IT TO PURCHASE AN ITEM AUTOMATICALLY
