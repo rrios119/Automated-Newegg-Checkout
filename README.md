@@ -15,6 +15,7 @@ Takes user inputs through JOption prompts and validates correct format using Reg
 - Chrome WebDriver automatically opens and automates the Checkout Process
 
 ## Video Demo
+**DEMO USES FAKE CREDIT CARD NUMBER**
 
 [![Checkout Demo](https://img.youtube.com/vi/2U9BnRntcYs/maxresdefault.jpg)](https://youtu.be/2U9BnRntcYs)
 
