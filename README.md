@@ -5,6 +5,7 @@ Takes user inputs through JOption prompts and validates correct format using Reg
 ## Table of Contents
 
 - [Usage](#usage)
+- [Video Demo](#video-demo)
 - [User Inputs](#user-inputs)
 
 ## Usage
@@ -12,6 +13,8 @@ Takes user inputs through JOption prompts and validates correct format using Reg
 **1. Run Main.java File**
 - Insert Needed Information
 - Chrome WebDriver automatically opens and automates the Checkout Process
+
+## Video Demo
 
 [![Checkout Demo](https://img.youtube.com/vi/2U9BnRntcYs/maxresdefault.jpg)](https://youtu.be/2U9BnRntcYs)
 
